@@ -17,6 +17,8 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import ProductManagementPage from "./pages/admin/ProductManagementPage";
 import AddProductPage from "./pages/admin/AddProductPage";
 import UpdateProductPage from "./pages/admin/UpdateProductPage";
+import Signin from "./pages/SignInpage";
+import Signup from "./pages/SignUpPage";
 
 function App() {
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -47,6 +49,8 @@ function App() {
             path="products/:id"
             element={<ProductDetailPage products={products} />}
           ></Route>
+          <Route path="signin" element={<Signin />}></Route>
+          {/* <Route path="signup" element={<Signup />}></Route> */}
         </Route>
         <Route path="/admin/products">
           <Route
